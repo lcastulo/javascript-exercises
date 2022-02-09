@@ -15,12 +15,12 @@ const palindromes = function (str) {
 	function isPalindrome(arr){
 		let firstElement = arr[0];
 		let lastElement = arr[arr.length-1];
+		let newarr = [];
 		if(firstElement != lastElement)
 			return false;
 		if (firstElement === lastElement){
-			arr.splice(0, 1);
-			arr.splice(arr.length-1, 1);
-			return isPalindrome(arr);
+			newarr = arr.slice(1, arr.length-1);
+			return isPalindrome(newarr);
 		}
 		return true;
 	}
@@ -31,3 +31,4 @@ const palindromes = function (str) {
 
 // Do not edit below this line
 module.exports = palindromes;
+++
