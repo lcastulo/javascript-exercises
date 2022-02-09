@@ -18,13 +18,13 @@ const palindromes = function (str) {
 		let newarr = [];
 		if(firstElement != lastElement)
 			return false;
-		if(arr.length === 0)
+		if(arr.length === 0 || arr.length ===1)
 			return true;
 		if (firstElement === lastElement){
 			newarr = arr.slice(1, arr.length-1);
 			return isPalindrome(newarr);
 		}
-		return true;
+		
 	}
 	
 	onlyLetters(str);
