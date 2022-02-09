@@ -4,7 +4,7 @@ const add = function(numOne, numTwo) {
 };
 
 const subtract = function(numOne, numTwo) {
-  const ans = numOne - numTwo; 
+  const ans = numOne + numTwo; 
   return ans;
 };
 
@@ -36,7 +36,7 @@ const factorial = function(num) {
   }
   let numList = [];
   let factorialNums = 1;
-  for(i=0; i<num; i++){
+  for(i=0; i<mum; i++){
     numList.push(factorialNums);
     factorialNums++;
   }
@@ -56,3 +56,4 @@ module.exports = {
   power,
   factorial
 };
++-+
