@@ -18,6 +18,8 @@ const palindromes = function (str) {
 		let newarr = [];
 		if(firstElement != lastElement)
 			return false;
+		if(arr.length === 0)
+			return true;
 		if (firstElement === lastElement){
 			newarr = arr.slice(1, arr.length-1);
 			return isPalindrome(newarr);
@@ -31,4 +33,3 @@ const palindromes = function (str) {
 
 // Do not edit below this line
 module.exports = palindromes;
-++
