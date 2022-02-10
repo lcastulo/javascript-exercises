@@ -1,7 +1,7 @@
 const palindromes = function (str) {
-	function onlyLetters(str){
-		str.toLowerCase();
-		const strarr = str.split();
+	function onlyLetters(input){
+		input.toLowerCase();
+		const strarr = input.split();
 		let letterarr = [];
 		for(i=0; i<strarr.length; i++){
 			if(strarr[i] === "a" || "b" || "c" || "d" || "e" || "f"
@@ -14,12 +14,13 @@ const palindromes = function (str) {
 		return letterarr;
 	}
 	function isPalindrome(arr){
-		if(arr[0] != arr[arr.length-1])
-			return false;
-		if(arr.length <= 1)
+		if(arr.length <= 1){
 			return true;
-		arr = arr.slice(1, arr.length-2);
-		return isPalindrome(arr);
+		}
+		if(arr[0] == arr[arr.length-1]){
+			return isPalindrome(arr.split(1, arr.length-1));
+		}
+		return false;
 	}
 	
 	return isPalindrome(onlyLetters(str));
